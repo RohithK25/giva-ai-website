@@ -1,87 +1,67 @@
-import { useState } from "react";
 import { Hero } from "@/components/Hero";
-import { ProductCard } from "@/components/ProductCard";
-import { QuickViewModal } from "@/components/QuickViewModal";
+import { ProductShowcase } from "@/components/ProductShowcase";
 
 const products = [
   {
     id: 1,
-    name: "Sterling Silver Butterfly Pendant",
+    title: "Sterling Silver Crystal Flower Pendant",
+    description: "Exquisite sterling silver pendant featuring a delicate flower design adorned with premium crystals. Perfect for both casual and formal occasions.",
     price: 1999,
-    image: "https://giva.co/cdn/shop/products/PD02262_1_800x.jpg?v=1681471307",
-    description: "Delicate butterfly pendant crafted in 925 sterling silver with rhodium plating for lasting shine."
+    image: "/lovable-uploads/f7ef6264-e1eb-4fb8-8171-a04479e578e4.png",
+    materials: [
+      "925 Sterling Silver",
+      "Premium Crystal Stones",
+      "Rhodium Plating for Extra Shine"
+    ],
+    careInstructions: [
+      "Store in a cool, dry place",
+      "Clean with silver polishing cloth",
+      "Avoid contact with perfumes and chemicals"
+    ]
   },
   {
     id: 2,
-    name: "Rose Gold Heart Necklace",
+    title: "Silver Antler Heart Pendant",
+    description: "A unique blend of romance and nature, this sterling silver pendant features antler-inspired details and a stunning red heart crystal centerpiece.",
     price: 2499,
-    image: "https://giva.co/cdn/shop/products/PD02263_1_800x.jpg?v=1681471307",
-    description: "Beautiful heart pendant with rose gold plating on sterling silver chain."
-  },
-  {
-    id: 3,
-    name: "Infinity Love Pendant",
-    price: 1799,
-    image: "https://giva.co/cdn/shop/products/PD02264_1_800x.jpg?v=1681471307",
-    description: "Elegant infinity symbol pendant symbolizing eternal love."
-  },
-  {
-    id: 4,
-    name: "Crystal Drop Necklace",
-    price: 2999,
-    image: "https://giva.co/cdn/shop/products/PD02265_1_800x.jpg?v=1681471307",
-    description: "Stunning drop pendant featuring premium crystals set in sterling silver."
-  },
-  {
-    id: 5,
-    name: "Pearl Chain Pendant",
-    price: 3499,
-    image: "https://giva.co/cdn/shop/products/PD02266_1_800x.jpg?v=1681471307",
-    description: "Classic pearl pendant with intricate silver work."
-  },
-  {
-    id: 6,
-    name: "Zodiac Sign Necklace",
-    price: 1599,
-    image: "https://giva.co/cdn/shop/products/PD02267_1_800x.jpg?v=1681471307",
-    description: "Personalized zodiac sign pendant in sterling silver."
+    image: "/lovable-uploads/4ef99147-87c5-4090-8234-fee05967ed0a.png",
+    materials: [
+      "925 Sterling Silver",
+      "Red Heart Crystal",
+      "Anti-tarnish Coating"
+    ],
+    careInstructions: [
+      "Store in the provided jewelry box",
+      "Avoid exposure to water while wearing",
+      "Polish regularly with a soft cloth"
+    ]
   }
 ];
 
 const Index = () => {
-  const [selectedProduct, setSelectedProduct] = useState<any>(null);
-  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
-
-  const handleQuickView = (product: any) => {
-    setSelectedProduct(product);
-    setIsQuickViewOpen(true);
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Hero />
       
-      <div className="container mx-auto py-16">
-        <h2 className="text-3xl font-bold text-center mb-12 text-secondary">
-          Our Bestselling Collections
-        </h2>
+      <div className="container mx-auto py-16 px-4">
+        <h1 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          Exclusive Collection
+        </h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-16">
           {products.map((product) => (
-            <ProductCard
+            <ProductShowcase
               key={product.id}
-              product={product}
-              onQuickView={handleQuickView}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+              image={product.image}
+              materials={product.materials}
+              careInstructions={product.careInstructions}
             />
           ))}
         </div>
       </div>
-
-      <QuickViewModal
-        product={selectedProduct}
-        isOpen={isQuickViewOpen}
-        onClose={() => setIsQuickViewOpen(false)}
-      />
     </div>
   );
 };
