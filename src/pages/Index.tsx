@@ -1,5 +1,6 @@
-import { Hero } from "@/components/Hero";
+import { motion } from "framer-motion";
 import { ProductShowcase } from "@/components/ProductShowcase";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 
 const products = [
   {
@@ -40,27 +41,74 @@ const products = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Hero />
-      
-      <div className="container mx-auto py-16 px-4">
-        <h1 className="text-4xl font-bold text-center mb-16 text-gray-800">
-          Exclusive Collection
-        </h1>
+    <div className="min-h-screen bg-[#1A1F2C] text-white">
+      {/* Hero Section */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative h-screen"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-[#1A1F2C]" />
         
-        <div className="space-y-16">
-          {products.map((product) => (
-            <ProductShowcase
-              key={product.id}
-              title={product.title}
-              description={product.description}
-              price={product.price}
-              image={product.image}
-              materials={product.materials}
-              careInstructions={product.careInstructions}
-            />
-          ))}
-        </div>
+        <Carousel className="h-full">
+          <CarouselContent>
+            {products.map((product) => (
+              <CarouselItem key={product.id}>
+                <div className="relative h-full">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-8 text-center bg-gradient-to-t from-black/80 to-transparent">
+                    <motion.h1 
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.5 }}
+                      className="text-4xl md:text-6xl font-light mb-4"
+                    >
+                      GIVA JEWELRY
+                    </motion.h1>
+                    <motion.p 
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: 0.7 }}
+                      className="text-xl md:text-2xl font-light text-gray-300"
+                    >
+                      one stop for your loved ones
+                    </motion.p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </motion.div>
+
+      {/* Product Showcases */}
+      <div className="container mx-auto px-4 py-16 space-y-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-light mb-4">Exclusive Collection</h2>
+          <div className="w-24 h-0.5 bg-primary mx-auto" />
+        </motion.div>
+
+        {products.map((product) => (
+          <ProductShowcase
+            key={product.id}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            image={product.image}
+            materials={product.materials}
+            careInstructions={product.careInstructions}
+          />
+        ))}
       </div>
     </div>
   );
