@@ -25,26 +25,23 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#D6BCFA",
-          dark: "#9F9EA1",
-          light: "#eee",
+          DEFAULT: "#C4A484", // Warm gold color
+          dark: "#8B7355",
+          light: "#DEC3A5",
         },
         secondary: {
           DEFAULT: "#1A1F2C",
           foreground: "#FFFFFF",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+        luxury: {
+          gold: "#C4A484",
+          black: "#1A1A1A",
+          dark: "#222222",
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
+      },
+      fontFamily: {
+        serif: ["Playfair Display", "serif"],
+        sans: ["Inter", "sans-serif"],
       },
       keyframes: {
         "fade-up": {
