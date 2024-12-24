@@ -4,36 +4,53 @@ import { ProductShowcase } from "@/components/ProductShowcase";
 const products = [
   {
     id: 1,
-    title: "Sterling Silver Crystal Flower Pendant",
-    description: "Exquisite sterling silver pendant featuring a delicate flower design adorned with premium crystals.",
-    price: 1999,
-    image: "/lovable-uploads/f7ef6264-e1eb-4fb8-8171-a04479e578e4.png",
+    title: "Elegant Diamond Ring",
+    description: "A stunning engagement ring featuring baguette-cut diamonds in a unique geometric pattern with a halo setting.",
+    price: 149999,
+    image: "/lovable-uploads/183608dc-5059-437e-9221-24d036bbd4f2.png",
     materials: [
-      "925 Sterling Silver",
-      "Premium Crystal Stones",
-      "Rhodium Plating for Extra Shine"
+      "18K White Gold",
+      "VVS1 Clarity Diamonds",
+      "Baguette Cut Center Stones"
     ],
     careInstructions: [
       "Store in a cool, dry place",
-      "Clean with silver polishing cloth",
-      "Avoid contact with perfumes and chemicals"
+      "Clean with professional jewelry cleaner",
+      "Regular maintenance check recommended"
     ]
   },
   {
     id: 2,
-    title: "Silver Antler Heart Pendant",
-    description: "A unique blend of romance and nature, this sterling silver pendant features antler-inspired details.",
-    price: 2499,
-    image: "/lovable-uploads/4ef99147-87c5-4090-8234-fee05967ed0a.png",
+    title: "Square Diamond Pendant",
+    description: "Modern square-cut diamond pendant with a delicate halo setting, perfect for everyday luxury.",
+    price: 89999,
+    image: "/lovable-uploads/57b744c3-ba7b-41d9-8ae9-ca1c7d518bba.png",
     materials: [
       "925 Sterling Silver",
-      "Red Heart Crystal",
-      "Anti-tarnish Coating"
+      "Premium Diamond Center Stone",
+      "Micro-pave Diamond Setting"
     ],
     careInstructions: [
       "Store in the provided jewelry box",
-      "Avoid exposure to water while wearing",
-      "Polish regularly with a soft cloth"
+      "Avoid contact with harsh chemicals",
+      "Professional cleaning recommended bi-annually"
+    ]
+  },
+  {
+    id: 3,
+    title: "Crystal Circle Necklace",
+    description: "Minimalist circular pendant necklace featuring brilliant-cut crystals in a modern design.",
+    price: 59999,
+    image: "/lovable-uploads/a66b5b88-e642-4159-b5ef-8ef7f9ebc641.png",
+    materials: [
+      "Sterling Silver Chain",
+      "Premium Crystal Stones",
+      "Rhodium Plating"
+    ],
+    careInstructions: [
+      "Keep away from water",
+      "Store in a dry place",
+      "Clean with soft jewelry cloth"
     ]
   }
 ];
