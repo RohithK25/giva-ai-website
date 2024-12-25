@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
-import { jewelryAnimations, sparkleEffect, cardAnimation } from '@/utils/animations';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Sparkles } from 'lucide-react';
 import { useToast } from './ui/use-toast';
 
 interface ProductShowcaseProps {
@@ -11,8 +10,11 @@ interface ProductShowcaseProps {
   description: string;
   price: number;
   image: string;
+  category: string;
   materials: string[];
   careInstructions: string[];
+  isActive: boolean;
+  onView: () => void;
 }
 
 export const ProductShowcase = ({
@@ -20,10 +22,14 @@ export const ProductShowcase = ({
   description,
   price,
   image,
+  category,
   materials,
   careInstructions,
+  isActive,
+  onView,
 }: ProductShowcaseProps) => {
   const [showDetails, setShowDetails] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const { toast } = useToast();
 
   const handleAddToCart = () => {
@@ -35,45 +41,70 @@ export const ProductShowcase = ({
 
   return (
     <motion.div
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
-      className="w-full max-w-4xl mx-auto mb-16"
+      onViewportEnter={onView}
+      className="w-full max-w-6xl mx-auto"
     >
-      <Card className="overflow-hidden bg-luxury-black shadow-xl border-luxury-gold/20">
+      <Card className="overflow-hidden bg-luxury-black border-primary/20">
         <CardContent className="p-0">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              variants={jewelryAnimations}
-              whileHover="hover"
               className="relative group"
+              onHoverStart={() => setIsHovered(true)}
+              onHoverEnd={() => setIsHovered(false)}
             >
-              <img
-                src={image}
-                alt={title}
-                className="w-full h-[500px] object-contain p-8"
-              />
               <motion.div
-                variants={sparkleEffect}
-                className="absolute inset-0 pointer-events-none"
+                className="relative aspect-square"
+                initial={{ y: -100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: [0.6, 0.01, -0.05, 0.95] }}
               >
-                {[...Array(5)].map((_, i) => (
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-full h-full object-contain p-8"
+                />
+                
+                {isHovered && (
                   <motion.div
-                    key={i}
-                    className="absolute w-2 h-2 bg-primary rounded-full"
-                    style={{
-                      top: `${Math.random() * 100}%`,
-                      left: `${Math.random() * 100}%`,
-                    }}
-                    variants={sparkleEffect}
-                  />
-                ))}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="absolute inset-0 pointer-events-none"
+                  >
+                    {[...Array(10)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        className="absolute"
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{
+                          opacity: [0, 1, 0],
+                          scale: [0, 1, 0],
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          delay: i * 0.1,
+                          repeat: Infinity,
+                          repeatDelay: Math.random() * 2,
+                        }}
+                        style={{
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`,
+                        }}
+                      >
+                        <Sparkles className="w-3 h-3 text-primary" />
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
               </motion.div>
             </motion.div>
             
             <motion.div
-              variants={cardAnimation}
               className="p-8 flex flex-col justify-center"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               <h2 className="text-3xl font-serif mb-4 text-primary">{title}</h2>
               <p className="text-gray-300 mb-6">{description}</p>
