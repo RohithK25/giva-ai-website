@@ -57,7 +57,7 @@ export const ProductShowcase = ({
                 initial={{ y: -100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 1.2, ease: [0.6, 0.01, -0.05, 0.95] }}
+                transition={{ duration: 1.2, ease: [0.4, 0, 0.2, 1] }}
               >
                 <img
                   src={image}
@@ -85,6 +85,7 @@ export const ProductShowcase = ({
                           delay: i * 0.1,
                           repeat: Infinity,
                           repeatDelay: Math.random() * 2,
+                          ease: "easeInOut"
                         }}
                         style={{
                           left: `${Math.random() * 100}%`,
@@ -104,7 +105,7 @@ export const ProductShowcase = ({
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             >
               <h2 className="text-3xl font-serif mb-4 text-primary">{title}</h2>
               <p className="text-gray-300 mb-6">{description}</p>

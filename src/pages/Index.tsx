@@ -75,7 +75,7 @@ const Index = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 1, ease: "easeOut" }}
         className="container mx-auto px-4 py-16"
       >
         <div className="space-y-32">
@@ -88,7 +88,7 @@ const Index = () => {
               transition={{ 
                 duration: 1.2,
                 delay: index * 0.2,
-                ease: [0.6, 0.01, -0.05, 0.95]
+                ease: "easeOut"
               }}
             >
               <ProductShowcase
