@@ -7,7 +7,7 @@ const products = [
     title: "Elegant Diamond Ring",
     description: "A stunning engagement ring featuring baguette-cut diamonds in a unique geometric pattern with a halo setting.",
     price: 149999,
-    image: "/lovable-uploads/183608dc-5059-437e-9221-24d036bbd4f2.png",
+    image: "/lovable-uploads/9c68ba28-7b63-4146-b64b-c4114cd22501.png",
     materials: [
       "18K White Gold",
       "VVS1 Clarity Diamonds",
@@ -24,7 +24,7 @@ const products = [
     title: "Square Diamond Pendant",
     description: "Modern square-cut diamond pendant with a delicate halo setting, perfect for everyday luxury.",
     price: 89999,
-    image: "/lovable-uploads/57b744c3-ba7b-41d9-8ae9-ca1c7d518bba.png",
+    image: "/lovable-uploads/b4c17720-59c8-475c-80d6-c46ea5107ce7.png",
     materials: [
       "925 Sterling Silver",
       "Premium Diamond Center Stone",
@@ -41,7 +41,7 @@ const products = [
     title: "Crystal Circle Necklace",
     description: "Minimalist circular pendant necklace featuring brilliant-cut crystals in a modern design.",
     price: 59999,
-    image: "/lovable-uploads/a66b5b88-e642-4159-b5ef-8ef7f9ebc641.png",
+    image: "/lovable-uploads/654a9397-1d52-457e-8c7b-eac55a4f5392.png",
     materials: [
       "Sterling Silver Chain",
       "Premium Crystal Stones",

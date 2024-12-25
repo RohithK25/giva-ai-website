@@ -25,7 +25,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#C4A484", // Warm gold color
+          DEFAULT: "#C4A484",
           dark: "#8B7355",
           light: "#DEC3A5",
         },
@@ -54,9 +54,20 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "sparkle": {
+          "0%, 100%": {
+            opacity: "0",
+            transform: "scale(0)",
+          },
+          "50%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
+        "sparkle": "sparkle 2s ease-in-out infinite",
       },
     },
   },
