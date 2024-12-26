@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { JewelryHero } from "@/components/JewelryHero";
 import { useEffect, useState } from "react";
+import BackgroundCollage from "@/components/BackgroundCollage";
 
 const products = [
   {
@@ -107,76 +108,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-luxury-black relative">
       {/* Background Collage */}
-      <div className="fixed inset-0 grid grid-cols-3 grid-rows-3 gap-2 opacity-20 pointer-events-none">
-        <motion.img
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          src="/lovable-uploads/82489695-7644-46af-bb6b-84e16013280e.png"
-          alt="Jewelry Collage"
-          className="w-full h-full object-cover"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="bg-gradient-to-br from-luxury-gold/20 to-transparent"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="bg-gradient-to-bl from-luxury-gold/10 to-transparent"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="bg-gradient-to-tr from-luxury-black to-transparent"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="relative overflow-hidden bg-luxury-black/50"
-        >
-          <motion.div
-            initial={{ x: "-100%" }}
-            animate={{ x: "100%" }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "linear"
-            }}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-luxury-gold/30 to-transparent"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="bg-gradient-to-tl from-luxury-gold/20 to-transparent"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.4 }}
-          className="bg-gradient-to-r from-luxury-black to-transparent"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.6 }}
-          className="bg-gradient-to-l from-luxury-gold/10 to-transparent"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.8 }}
-          className="bg-gradient-to-t from-luxury-black to-transparent"
-        />
-      </div>
+      <BackgroundCollage />
 
       {/* Content */}
       <div className="relative z-10">
