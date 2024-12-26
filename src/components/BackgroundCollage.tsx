@@ -21,7 +21,7 @@ const promotionalTexts = [
 
 const BackgroundCollage = () => {
   return (
-    <div className="absolute inset-0 min-h-full w-full grid grid-cols-3 grid-rows-3 gap-1 opacity-20">
+    <div className="absolute inset-0 h-screen w-full grid grid-cols-3 grid-rows-3 gap-1 opacity-20">
       {/* Row 1 */}
       <motion.div
         initial={{ opacity: 0 }}

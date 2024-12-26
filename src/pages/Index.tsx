@@ -107,42 +107,43 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative">
-      {/* Background Collage */}
-      <BackgroundCollage />
+      <div className="h-screen relative overflow-hidden bg-luxury-black">
+        {/* Background Collage */}
+        <BackgroundCollage />
 
-      {/* Content */}
-      <div className="relative z-10">
+        {/* Hero Content */}
         <JewelryHero isLoaded={isLoaded} />
-        
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1, ease: "easeOut" }}
-          className="container mx-auto px-4 py-16"
-        >
-          <div className="space-y-32">
-            {products.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ 
-                  duration: 1.2,
-                  delay: index * 0.2,
-                  ease: "easeOut"
-                }}
-              >
-                <ProductShowcase
-                  {...product}
-                  isActive={activeProduct === index}
-                  onView={() => setActiveProduct(index)}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
+      
+      {/* Products Section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1, ease: "easeOut" }}
+        className="container mx-auto px-4 py-16 bg-luxury-black"
+      >
+        <div className="space-y-32">
+          {products.map((product, index) => (
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.2,
+                delay: index * 0.2,
+                ease: "easeOut"
+              }}
+            >
+              <ProductShowcase
+                {...product}
+                isActive={activeProduct === index}
+                onView={() => setActiveProduct(index)}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </div>
   );
 };
