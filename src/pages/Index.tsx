@@ -106,7 +106,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-luxury-black relative">
+    <div className="min-h-screen relative">
       {/* Background Collage */}
       <BackgroundCollage />
 
