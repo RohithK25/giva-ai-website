@@ -41,7 +41,7 @@ const BackgroundCollage = () => {
         className="relative overflow-hidden"
       >
         <img
-          src="/lovable-uploads/f7f07dde-9cf9-4603-a8e1-f6201b8cffc1.png"
+          src="/lovable-uploads/72a3dc68-be04-4407-8e39-953681de491e.png"
           alt="Luxury Ring"
           className="w-full h-full object-cover"
         />
@@ -66,7 +66,7 @@ const BackgroundCollage = () => {
         className="relative overflow-hidden"
       >
         <img
-          src="/lovable-uploads/ded1649c-e6c2-40af-bede-8b99004fe1a1.png"
+          src="/lovable-uploads/fe7f1d52-0ff9-4d08-bd04-4fc81b184f49.png"
           alt="Diamond Pendant"
           className="w-full h-full object-cover"
         />
@@ -89,7 +89,7 @@ const BackgroundCollage = () => {
         className="relative overflow-hidden"
       >
         <img
-          src="/lovable-uploads/e421076c-3ecf-489f-98ae-f3e974223bd7.png"
+          src="/lovable-uploads/81c907a3-3906-4015-bff3-3da26d964aee.png"
           alt="Circle Necklace"
           className="w-full h-full object-cover"
         />
@@ -114,7 +114,7 @@ const BackgroundCollage = () => {
         className="relative overflow-hidden"
       >
         <img
-          src="/lovable-uploads/df067f12-2b40-4581-9693-d2f8091a65a7.png"
+          src="/lovable-uploads/818ac08b-b6fa-49fb-88f8-7072f19c9727.png"
           alt="Diamond Necklace"
           className="w-full h-full object-cover"
         />
@@ -126,7 +126,7 @@ const BackgroundCollage = () => {
         className="relative overflow-hidden"
       >
         <img
-          src="/lovable-uploads/f407b0ba-8c7e-4b8b-8f69-453e1d8e6599.png"
+          src="/lovable-uploads/e7222759-7435-4d60-b2b9-b062887b004d.png"
           alt="Heart Necklace"
           className="w-full h-full object-cover"
         />

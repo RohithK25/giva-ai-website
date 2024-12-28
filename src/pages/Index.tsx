@@ -10,7 +10,7 @@ const products = [
     title: "Elegant Diamond Ring",
     description: "A stunning engagement ring featuring baguette-cut diamonds in a unique geometric pattern with a halo setting.",
     price: 149999,
-    image: "/lovable-uploads/d1d20741-61e7-4d90-a06f-804f2f6e5f4a.png",
+    image: "/lovable-uploads/72a3dc68-be04-4407-8e39-953681de491e.png",
     category: "ring",
     materials: [
       "18K White Gold",
@@ -28,7 +28,7 @@ const products = [
     title: "Square Diamond Pendant",
     description: "Modern square-cut diamond pendant with a delicate halo setting, perfect for everyday luxury.",
     price: 89999,
-    image: "/lovable-uploads/4562be45-5c1e-4f53-9efd-e0b9856a55c6.png",
+    image: "/lovable-uploads/fe7f1d52-0ff9-4d08-bd04-4fc81b184f49.png",
     category: "necklace",
     materials: [
       "925 Sterling Silver",
@@ -46,7 +46,7 @@ const products = [
     title: "Crystal Circle Necklace",
     description: "Minimalist circular pendant necklace featuring brilliant-cut crystals in a modern design.",
     price: 59999,
-    image: "/lovable-uploads/6b48a9d9-e9ba-41af-af66-6784bde83bbc.png",
+    image: "/lovable-uploads/81c907a3-3906-4015-bff3-3da26d964aee.png",
     category: "necklace",
     materials: [
       "Sterling Silver Chain",
@@ -64,7 +64,7 @@ const products = [
     title: "Floral Diamond Pendant",
     description: "Exquisite floral-inspired pendant featuring a cluster of diamonds in a delicate arrangement.",
     price: 79999,
-    image: "/lovable-uploads/c237b7aa-74be-405b-87c8-8a74f3724c10.png",
+    image: "/lovable-uploads/818ac08b-b6fa-49fb-88f8-7072f19c9727.png",
     category: "necklace",
     materials: [
       "18K White Gold",
@@ -82,7 +82,7 @@ const products = [
     title: "Heart Ruby Necklace",
     description: "Romantic heart-shaped ruby pendant with antler-inspired silver detailing.",
     price: 69999,
-    image: "/lovable-uploads/4a5f9389-f6ac-4b7c-a3e9-d9dc8b320f36.png",
+    image: "/lovable-uploads/e7222759-7435-4d60-b2b9-b062887b004d.png",
     category: "necklace",
     materials: [
       "Sterling Silver",
